@@ -7,7 +7,8 @@ import (
 // GetAccount
 func (b *ByBit) GetAccount() (query string, resp []byte, result Balance, err error) {
 	var ret GetBalanceResult
-	query, resp, err = b.SignedRequest(http.MethodGet, "/spot/v1/account", nil, &ret)
+	params := map[string]interface{}{}
+	query, resp, err = b.SignedRequest(http.MethodGet, "/spot/v1/account", params, &ret)
 	if err != nil {
 		return
 	}
