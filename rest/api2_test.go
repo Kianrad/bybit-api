@@ -1,7 +1,7 @@
 package rest_test
 
 import (
-	"github.com/frankrap/bybit-api/rest"
+	"github.com/Kianrad/bybit-api/rest"
 	"testing"
 )
 
