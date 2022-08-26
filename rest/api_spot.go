@@ -34,7 +34,7 @@ func (b *ByBit) CreateSpotOrder(symbol string,
 	params["timeInForce"] = timeInForce
 	params["qty"] = qty
 	params["orderLinkId"] = clientOID
-	query, resp, err = b.SignedRequest(http.MethodGet, "/spot/v1/order", params, &ret)
+	query, resp, err = b.SignedRequest(http.MethodPost, "/spot/v1/order", params, &ret)
 	if err != nil {
 		return
 	}
