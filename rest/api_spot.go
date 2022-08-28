@@ -18,7 +18,7 @@ func (b *ByBit) GetAccount() (query string, resp []byte, result Balance, err err
 func (b *ByBit) CreateSpotOrder(symbol string,
 	side string,
 	orderType string,
-	qty float64,
+	qty string,
 	price float64,
 	timeInForce string,
 	clientOID string,
